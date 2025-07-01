@@ -1,0 +1,11 @@
+pyodbc
+python-dotenv
+pandas
+sqlalchemy
+azure-identity
+semantic-kernel
+streamlit
+azure-keyvault-secrets
+azure-monitor-opentelemetry
+opentelemetry-sdk
+azure-ai-projects
