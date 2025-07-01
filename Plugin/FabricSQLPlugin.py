@@ -102,7 +102,10 @@ class FabricSQLPlugin:
             token_struct = self._get_azure_sql_access_token()  
             engine = self._get_sql_engine(fabric_connection_string, driver, token_struct) 
             df = pd.read_sql(query, engine)
-            return df.to_html(index=False, border=0, justify='center', classes='table table-striped table-bordered')
+            html_table = df.to_html(index=False, border=0, justify='center', classes='table table-striped table-bordered')  
+            print(html_table)  
+            return html_table
+    
         except Exception as e:
             print("Error:", e)
             return f"Error retrieving schema for table '{table_name}': {e}"
